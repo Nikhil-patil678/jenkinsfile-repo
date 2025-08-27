@@ -2,6 +2,11 @@ pipeline {
     agent any
 
     stages {
+        stage('pull') {
+            steps {
+                 git 'https://github.com/Nikhil-patil678/Node.js-Application-Deployment.git'
+            }
+        }
         stage('Build') {
             steps {
                 echo 'Building..'
